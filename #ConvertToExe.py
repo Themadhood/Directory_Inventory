@@ -10,18 +10,21 @@ _FP = os.path.dirname(os.path.abspath(__file__))
 
 #old specs
 try:
-    os.remove(f"{_FP}/Main.spec")
+    os.remove(f"{_FP}/Directory_Inventory.spec")
 except:
     print("failed run")
 
+iconPath = os.path.dirname(os.path.abspath(__file__))
+#iconPath = f"{os.path.dirname(_FP)}"
 
-opt = [f'{_FP}/Main.py',
+opt = [f'{_FP}/Directory_Inventory.py',
        '--noconsole',
        '--noconfirm',
        '--onefile',
        #icon
-       #f"--add-data={_FP}/_Graphics/Game_icon.ico:_Graphics",
-       #f'--icon={_FP}/_Graphics/Game_icon.ico'
+       f"--add-data={os.path.join(iconPath, 'Icon.png')}:.",
+       f"--icon={os.path.join(iconPath, 'Icon.png')}",
+       f"--splash={os.path.join(iconPath, 'Icon.png')}"
        ]
 
 

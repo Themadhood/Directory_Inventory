@@ -1,4 +1,4 @@
-__ErrorInfo__   = {'program':       "TMP_DrToTxtLst_FrontEnd",
+__ErrorInfo__   = {'program':       "Directory_Inventory.FrontEnd",
                    'version':       "0.0.2",
                    'ErrorTab':      "Small Apps"}
 
@@ -8,7 +8,7 @@ __ModuleInfo__  = {"Programmer":     "Themadhood Pequot",
 All rights reserved. Redistribution, modification, or reverse engineering
 of this software is prohibited without explicit written permission.
 Unauthorized use may result in legal action.""",
-                   "Date":          "5/29/2026",
+                   "Date":          "1/14/2025",
                    "Time":          "0000:00:00: 01:00:00",
                    "Update":        """
 Split frontend from backend.
@@ -22,7 +22,7 @@ Supports flat file listing and tree output.
 
 
 #Imports
-import io
+import io,sys,os
 import tkinter as TK
 from tkinter import filedialog as FD
 from tkinter import messagebox as MB
@@ -33,7 +33,14 @@ except ImportError:
     from BackEnd import DirectoryListBackEnd, FLAT_MODE, TREE_MODE
 
 
+def resource_path(relative_path):    
+    try:       
+        base_path = sys._MEIPASS
+    except:
+        base_path = os.path.dirname(os.path.abspath(__file__))
 
+    return os.path.join(base_path, relative_path)
+ICON = resource_path(f"Icon.png")
 
 
 
@@ -61,6 +68,8 @@ class DirectoryListFrontEnd(TK.Tk):
         self.geometry("+341+285")
         self.resizable(width=False, height=False)
         self.config(bg=BG)
+        self._icon_img = TK.PhotoImage(file=ICON)
+        self.iconphoto(True, self._icon_img)
 
         self._BuildGui()
         self.mainloop()

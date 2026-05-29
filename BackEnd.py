@@ -1,4 +1,4 @@
-__ErrorInfo__   = {'program':       "TMP_DrToTxtLst_BackEnd",
+__ErrorInfo__   = {'program':       "Directory_Inventory.BackEnd",
                    'version':       "0.0.2",
                    'ErrorTab':      "Functions"}
 
@@ -8,7 +8,7 @@ __ModuleInfo__  = {"Programmer":     "Themadhood Pequot",
 All rights reserved. Redistribution, modification, or reverse engineering
 of this software is prohibited without explicit written permission.
 Unauthorized use may result in legal action.""",
-                   "Date":          "5/29/2026",
+                   "Date":          "1/14/2025",
                    "Time":          "0000:00:00: 01:00:00",
                    "Update":        """
 Split frontend from backend.
