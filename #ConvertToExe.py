@@ -23,9 +23,7 @@ opt = [f'{_FP}/Directory_Inventory.py',
        '--onefile',
        #icon
        f"--add-data={os.path.join(iconPath, 'Icon.png')}:.",
-       f"--icon={os.path.join(iconPath, 'Icon.png')}",
-       f"--splash={os.path.join(iconPath, 'Icon.png')}"
-       ]
+       f"--icon={os.path.join(iconPath, 'Icon.png')}"]
 
 
 #cleen app
